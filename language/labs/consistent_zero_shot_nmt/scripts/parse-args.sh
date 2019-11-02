@@ -46,6 +46,7 @@ while [[ $# -gt 0 ]]; do
       ;;
     --gpu-num=*)
       EXP_GPU_NUM=${1#*=}
+      ;;
     # Help.
     -h|--help)
       echo "Available arguments: --data-dir, --output-dir, --dataset-name, --conf-name, --model-name, --problem-name."
