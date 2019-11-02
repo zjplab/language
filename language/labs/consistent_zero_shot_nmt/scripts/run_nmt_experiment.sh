@@ -37,4 +37,5 @@ python -m language.labs.consistent_zero_shot_nmt.bin.t2t_trainer \
   --output_dir=${EXP_OUTPUT_DIR} \
   --local_eval_frequency=${EXP_LOCAL_EVAL_FREQ} \
   --schedule=train_and_evaluate \
-  --alsologtostderr
+  --alsologtostderr \
+  --gpu_num=${EXP_GPU_NUM}

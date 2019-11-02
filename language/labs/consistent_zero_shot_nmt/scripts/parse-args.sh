@@ -21,6 +21,7 @@ EXP_DATASET_NAME="iwslt17-official"
 EXP_CONF_NAME="basic_gnmt_luong_att"
 EXP_MODEL_NAME="basic_multilingual_nmt"
 EXP_PROBLEM_NAME="translate_iwslt17_nonoverlap"
+EXP_GPU_NUM="2"
 
 # Parse arguments and override defaults.
 while [[ $# -gt 0 ]]; do
@@ -43,6 +44,8 @@ while [[ $# -gt 0 ]]; do
     --problem-name=*)
       EXP_PROBLEM_NAME=${1#*=}
       ;;
+    --gpu-num=*)
+      EXP_GPU_NUM=${1#*=}
     # Help.
     -h|--help)
       echo "Available arguments: --data-dir, --output-dir, --dataset-name, --conf-name, --model-name, --problem-name."
