@@ -51,3 +51,21 @@ CUDA_VISIBLE_DEVICES=0,2,3,6
     --problem-name=translate_iwslt17 \
     --gpu-num=4 \
     --output-dir=/dresden/users/jz704/results 2>&1 | tee  ~/exp_result/iwslt_orininal_basic 
+
+
+
+
+CUDA_VISIBLE_DEVICES=2,5,6,7 ./language/labs/consistent_zero_shot_nmt/scripts/run_nmt_experiment.sh \
+    --data-dir=/dresden/users/jz704/data \
+    --dataset-name=iwslt17-star \
+    --model-name=agreement_multilingual_nmt \
+    --conf-name=ag_gnmt_luong_att \
+    --problem-name=translate_iwslt17 \
+    --gpu-num=4 \
+    --output-dir=/dresden/users/jz704/results 2>&1 | tee  ~/exp_result/iwslt_orininal_agree 
+
+
+#decode
+./language/labs/consistent_zero_shot_nmt/scripts/decode_iwslt17.sh \
+dresden/users/jz704/data \
+dresden/users/jz704/data/iwslt17-star/tfrecords/
